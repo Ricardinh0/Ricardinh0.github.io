@@ -1,7 +1,11 @@
+html, body {
+  font-size: 10px;
+  padding-bottom: 200px;
+}
 body {
-  font-family: Helvetica, arial, sans-serif;
-  font-size: 14px;
+  font-family: 'Open Sans', Helvetica, arial, sans-serif;
   line-height: 1.6;
+  font-size: 1.6rem;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
@@ -16,6 +20,44 @@ body > *:first-child {
 body > *:last-child {
   margin-bottom: 0 !important;
 }
+
+.projects {
+  padding-left: 0px;
+  margin-bottom: 30px;
+}
+.projects li {
+  list-style: none;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 30px;
+}
+.projects li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: #f2f257;
+}
+.projects span {
+  font-size: 1.2rem;
+}
+.projects span a {
+  text-decoration: underline;
+}
+
+span.tag{
+  background: #eee;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 1px 5px;
+  font-size: 1rem;
+}
+
+
 
 a {
   color: #3a7ed7;
@@ -44,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   cursor: text;
   position: relative;
+  font-family: 'Merriweather', serif;
 }
 
 h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
@@ -80,13 +123,15 @@ h6 tt, h6 code {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 40px;
   color: black;
 }
 
 h2 {
-  font-size: 24px;
-  border-bottom: 1px solid #cccccc;
+  font-size: 34px;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
   color: black;
 }
 
@@ -95,7 +140,8 @@ h3 {
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 20px;
+  margin-top: 0;
 }
 
 h5 {
@@ -112,11 +158,10 @@ p, blockquote, ul, ol, dl, li, table, pre {
 }
 
 hr {
-  background: transparent url("http://tinyurl.com/bq5kskr") repeat-x 0 0;
-  border: 0 none;
-  color: #cccccc;
-  height: 4px;
-  padding: 0;
+  border: none;
+  background: #ddd;
+  height: 1px;
+  margin: 40px 0;
 }
 
 body > h2:first-child {
