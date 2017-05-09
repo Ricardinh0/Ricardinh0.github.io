@@ -5,62 +5,90 @@
   <title>Ricardin/ho</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300|Open+Sans:400" rel="stylesheet">
   <link rel="stylesheet" href="./css/github.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .title {
+      float: left;
+      position: relative;
+      padding-top: 0px;
+      max-width: 400px;
+    }
+    .content {
+      float: left;
+      margin-left: 100px;
+      max-width: 600px;
+    }
+
+
+    @media (max-width: 1000px) {
+      .title {
+        margin-bottom: 30px;
+      }
+      .content {
+        margin-left: 0;
+      }
+      .tag-wrap {
+        display: block;
+        margin-top: 10px;
+      }
+      .tag {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- <div class="dot"></div> -->
-  <div style="float: left; position: relative; padding-top: 0px;">
+  <div class="title">
     <h1>Richard Coulson</h1>
     <p>A front-end developer in Sydney, <a href="https://www.linkedin.com/in/richard-coulson-48a63132/" target="_blank">Contact me</a></p>
-
-    <!-- My proefessional experience has always been balanced between design and code. But my love for science has probably pushed me deep into tryign to become a well rounded developer who wants to focus on writing clean, testable code using industry best practices.
-    My ideal next role would be working on a tech product within a team of developers who openly act to teach, inspire each other to push the team to its fullest.
-    I know how a good product life-cycle works. I know how the research conducted by UX is translated through to dev-ready UI designs. I know how the pitfalls that can be made and actively aim to help project through to launch.
-    So feel free to take some time to have a look through some of my projects below
-    Unidirectional Data Flow
-    -->
   </div>
-  <div style="float: left; margin-left: 100px; width: 600px;">
+  <div class="content">
     <h4>My Projects</h4>
     <ul class="projects">
       <li>Panorama for Burberry - iOS gyro ready<br>
         <span><a href="https://ricardinh0.github.io/panorama/dist/" target="_blank">View</a></span>&nbsp;&nbsp;
         <span><a href="https://github.com/Ricardinh0/panorama">Source code</a></span>&nbsp;&nbsp;
-        <span class="tag">Device Orientation API</span>
-        <span class="tag">Vanilla JS</span>
-        <span class="tag">Require</span>
-        <span class="tag">Grunt</span>
-        <span class="tag">Less</span>
+        <span class="tag-wrap">
+          <span class="tag">Device Orientation API</span>
+          <span class="tag">Vanilla JS</span>
+          <span class="tag">Require</span>
+          <span class="tag">Grunt</span>
+          <span class="tag">Less</span>
+        </span>
       </li>
       <li>Music production - Chrome experiment<br>
         <span><a href="https://lit-garden-66084.herokuapp.com" target="_blank">View</a></span>&nbsp;&nbsp;
-        <span class="tag">Web Audio API</span>
-        <span class="tag">NodeJS</span>
-        <span class="tag">MongoDB</span>
-        <span class="tag">AWS</span>
-        <span class="tag">Require</span>
-        <span class="tag">KnockoutJS</span>
-        <span class="tag">Sass</span>
-        <span class="tag">Jade</span>
-        <span class="tag">Gulp</span>
+        <span class="tag-wrap">
+          <span class="tag">Web Audio API</span>
+          <span class="tag">NodeJS</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Require</span>
+          <span class="tag">KnockoutJS</span>
+          <span class="tag">Sass</span>
+          <span class="tag">Jade</span>
+          <span class="tag">Gulp</span>
+        </span>
       </li>
       <li>Avatar Cropping - ReactJS<br>
         <span><a href="https://ricardinh0.github.io/vader/dist/" target="_blank">View</a></span>&nbsp;&nbsp;
         <span><a href="https://github.com/Ricardinh0/vader">Source code</a></span>&nbsp;&nbsp;
-        <span class="tag">React</span>
-        <span class="tag">Webpack</span>
-        <span class="tag">Sass</span>
-        <span class="tag">PostCSS</span>
-        <span class="tag">Karma</span>
+        <span class="tag-wrap">
+          <span class="tag">React</span>
+          <span class="tag">Webpack</span>
+          <span class="tag">Sass</span>
+          <span class="tag">PostCSS</span>
+          <span class="tag">Karma</span>
+        </span>
       </li>
       <li>Calendar<br>
         <span><a href="https://ricardinh0.github.io/calendar/" target="_blank">View</a></span>&nbsp;&nbsp;
         <span><a href="https://github.com/Ricardinh0/calendar">Source code</a></span>&nbsp;&nbsp;
-        <span class="tag">Vanilla JS</span>
+        <span class="tag-wrap">
+          <span class="tag">Vanilla JS</span>
+        </span>
       </li>
     </ul>
-<!--     <hr>
-    <h4>Bio</h4>
-    <p>My proefessional experience has always been balanced between design and code. But my love for science has probably pushed me deep into tryign to become a well rounded developer who wants to focus on writing clean, testable code using industry best practices.</p> -->
     <hr>
     <h4>Community</h4>
     <ul>
