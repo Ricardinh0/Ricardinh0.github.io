@@ -1,119 +1,116 @@
-
-Skip to end of metadata
-Created by Matthew Harvey, last modified 21 minutes ago Go to start of metadata
-Configuring your terminal
+###Configuring your terminal
 On OSX, open Terminal. Click on "Terminal" at the top right, then "Preferences...". Configure dimensions, font, colours etc..
 Navigating
 Print current working directory
-> pwd
+`pwd`
 List files (including directories)
-> ls
+`ls`
 List files including hidden files
-> ls -a
+`ls -a`
 Detailed file listing
-> ls -alFh
+`ls -alFh`
 Change directories
-> cd /absolute/path/I/want/to/go/to
-> cd relative/path/to/file
-> cd ../../another/relative/path
-> cd ~/relative/to/home/dir
+`cd /absolute/path/I/want/to/go/to`
+`cd relative/path/to/file`
+`cd ../../another/relative/path`
+`cd ~/relative/to/home/dir`
 Go up to parent directory
-> cd ..
+`cd ..`
 Go to my home directory (e.g. /Users/matthewh)
-> cd
+`cd`
 Change directories pushing onto stack
-> pushd /path/I/want/to/go/to
+`pushd /path/I/want/to/go/to`
 Go back, popping from stack
-> popd
+`popd`
 Beginning of line (bash)
-> Ctrl + a
+`Ctrl + a`
 End of line (bash)
-> Ctrl + e 
+`Ctrl + e `
 Delete single word (bash)
-> Ctrl + w
+`Ctrl + w`
 Making files and directories
 Make a directory
-> mkdir name_of_my_directory
+`mkdir name_of_my_directory`
 Make a file
-> touch name_of_my_file
+`touch name_of_my_file`
 Or you can just open it with your text editor and then when you save it it will be created:
-> vim name_of_my_file
+`vim name_of_my_file`
 Moving and renaming files and directories
 Renaming a file
-> mv old_name new_name
+`mv old_name new_name`
 This will clobber any file called new_name if it already exists. You can be warned if you like, using the `-i` option:
-> mv -i old_name new_name
+`mv -i old_name new_name`
 "Renaming" is really just a special case of moving:
-> mv file_name the/directory/where/I/want/it/to/go/
+`mv file_name the/directory/where/I/want/it/to/go/`
 Again, use `-i` if you want to be warned before clobbering a file in the new location.
 Deleting files
-> rm the_file_I_want_to_delete
+`rm the_file_I_want_to_delete`
 This is permanent. It doesn't merely chuck the file in the trash.
 To get an "Are you sure?" message before proceeding, using `-i`:
-> rm i the_file_I_want_to_delete
+`rm i the_file_I_want_to_delete`
 To delete an empty directory:
-> rmdir the_directory_I_want_to_delete
+`rmdir the_directory_I_want_to_delete`
 To permanently delete a directory and everything in it:
-> rm -r the_directory
+`rm -r the_directory`
 Depending on permissions, you might receive prompts when you try to delete things. These can get repetitive. To recursively delete a directory (or file) and all it contains, without receiving any prompts, do:
-> rm -rf the_directory
+`rm -rf the_directory`
 Use with caution – it's permanent.
 Finding files
 Search for a file recursively within current directory:
-> find . -name exact_name_of_file
-> find . -name '*part_name_of_file*'
+`find . -name exact_name_of_file`
+`find . -name '*part_name_of_file*'`
 Remember quotes when "globbing"!
 Search within some other directory:
-> find /some/other/directory -name name_of_file
+`find /some/other/directory -name name_of_file`
 Viewing files
 See the top few lines of a file
-> head some_file
+`head some_file`
 See the last few lines of a file
-> tail some_file
+`tail some_file`
 See the last few lines and keep updating it as more lines are added (good few live-viewing log files and such)
-> tail -f some_file
+`tail -f some_file`
 See the top 30 lines of a file
-> head -30 some_file
+`head -30 some_file`
 See the last 30 lines of a file
-> tail -30 some_file
+`tail -30 some_file`
 Output the entire file contents to console
-> cat some_file
+`cat some_file`
 View a large file bit by bit
-> less some_file
+`less some_file`
 Edit a file (wink)
-> vim some_file
+`vim some_file`
 
 Inspecting processes
 List running processes:
-> ps aux
+`ps aux`
 Search for processes containing a given string:
-> ps aux | grep the_string
+`ps aux | grep the_string`
 This will give you a list of processed with "pids" (process IDs). You can kill a process by passing its pid to `kill`:
-> kill 12345
+`kill 12345`
 This generally causes the process to be shut down cleanly. Sometimes process refuse to die. You can then resort to an "unclean kill" with `-9`. Try not to do this unless you really have to:
-> kill -9 12345
+`kill -9 12345`
 Monitor running processes (press q to quit)
-> top 
+`top `
 Searching previous commands
 Searching previous commands used (bash)
-> Ctrl + r 
+`Ctrl + r `
 Start typing for search, Ctrl + Shift + r for reversing
 You can also use up and down arrows to view previous commands. Or look in ~/.bash_history, ~/.zsh_history.
 Remember tab key for autocompletion (better in zsh (wink) ).
 Some handy substitutions:
 Refer to previous command:
-> !!
+`!!`
 E.g. to run the last command with `sudo`:
-> sudo !!
+`sudo !!`
 To grab the last argument passed to the last command:
-> !$
+`!$`
 This too can be substituted into another command, and can be quite handy. zsh usefully autocompletes these aliases on tab.
 Filtering/Redirection
 Redirecting with Pipe  and Grep - |
-> rake routes | grep account
+`rake routes | grep account`
 // Shows routes with the word account in the output
 You can search for regular expressions. `egrep` is often more convenient here as it allows more regex syntax. This will search case-insensitively for "account" or "job":
-> rake routes | egrep -i 'account|job'
+`rake routes | egrep -i 'account|job'`
 Executable files
 Let's say you've written a Ruby script, which lives at ~/scratch.rb. Say that contents are
 puts "Hello, world!"
@@ -126,13 +123,13 @@ Execute the file by providing a path to it: `./scratch.rb`. (Just typing the fil
 Getting help with command line programs
 Many command-line programs have a quick `--help` option that outputs a small chunk of info on basic usage.
 E.g.
-> ack --help
+`ack --help`
 For in-depth help, command-line programs will usually have a "man page" as well, e.g.:
-> man ack
+`man ack`
 Aliases and shell configuration
 You might find yourself running the same commands again and again. To save time, you can create a an alias:
-> alias blob="echo hello"
-> blob
+`alias blob="echo hello"`
+`blob`
 hello
 This will only last for your current shell session though. To make it permanent, put it in ~/.bashrc (or ~/.zshrc if you're using ~/.zsh). You can also put other commands in ~/.bashrc that you want to be run every time you start up the shell.
 To see a list of all your current aliases, type `alias`.
