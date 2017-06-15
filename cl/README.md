@@ -1,51 +1,76 @@
-###Configuring your terminal
+### Configuring your terminal
 On OSX, open Terminal. Click on "Terminal" at the top right, then "Preferences...". Configure dimensions, font, colours etc..
-Navigating
+#### Navigating
+
 Print current working directory
 `pwd`
+
 List files (including directories)
 `ls`
+
 List files including hidden files
 `ls -a`
+
 Detailed file listing
 `ls -alFh`
+
 Change directories
 `cd /absolute/path/I/want/to/go/to`
 `cd relative/path/to/file`
 `cd ../../another/relative/path`
 `cd ~/relative/to/home/dir`
+
 Go up to parent directory
 `cd ..`
+
 Go to my home directory (e.g. /Users/matthewh)
 `cd`
+
 Change directories pushing onto stack
 `pushd /path/I/want/to/go/to`
+
 Go back, popping from stack
 `popd`
+
 Beginning of line (bash)
 `Ctrl + a`
+
 End of line (bash)
 `Ctrl + e `
+
 Delete single word (bash)
 `Ctrl + w`
-Making files and directories
+
+#### Making files and directories
+
 Make a directory
 `mkdir name_of_my_directory`
+
 Make a file
 `touch name_of_my_file`
+
 Or you can just open it with your text editor and then when you save it it will be created:
 `vim name_of_my_file`
-Moving and renaming files and directories
+
+#### Moving and renaming files and directories
+
 Renaming a file
 `mv old_name new_name`
+
 This will clobber any file called new_name if it already exists. You can be warned if you like, using the `-i` option:
 `mv -i old_name new_name`
+
 "Renaming" is really just a special case of moving:
 `mv file_name the/directory/where/I/want/it/to/go/`
+
 Again, use `-i` if you want to be warned before clobbering a file in the new location.
-Deleting files
+
+#### Deleting files
+
 `rm the_file_I_want_to_delete`
+
 This is permanent. It doesn't merely chuck the file in the trash.
+
 To get an "Are you sure?" message before proceeding, using `-i`:
 `rm i the_file_I_want_to_delete`
 To delete an empty directory:
